@@ -1,0 +1,28 @@
+.container {
+  min-width: 20rem;
+  min-height: 35.5rem;
+  background-image: url('../../assets/Background.jpg');
+  background-position-x: center;
+  background-size: 175% 100%;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__pop-up {
+    display: flex;
+    justify-content: center;
+
+    margin: 0 auto;
+
+    width: 18rem;
+    height: 25rem;
+    flex-shrink: 0;
+
+    border-radius: 1rem;
+    background: rgba(48, 24, 76, 0.62);
+    backdrop-filter: blur(0.2rem);
+    box-shadow: -6px 15px 10px 0px rgba(0, 0, 0, 0.17);
+  }
+}
