@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class SignPageComponent {
 
+  loginVisibility = "show"
+  signinVisibility = "hidden"
+
+  switchLoginVisibility() {
+    if(this.loginVisibility === "show") {
+      this.loginVisibility = "hidden";
+      this.signinVisibility = "show";
+    } else {
+      this.loginVisibility = "show";
+      this.signinVisibility = "hidden";
+    }
+  }
 }
