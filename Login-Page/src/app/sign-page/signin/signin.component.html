@@ -11,6 +11,8 @@
         name="user-name"
         id="user-name"
         placeholder="Name"
+        required
+        [(ngModel)]="name"
       >
       <input
         class="container__signin__inputs__email"
@@ -18,6 +20,8 @@
         name="user-email"
         id="user-email"
         placeholder="Email"
+        required
+        [(ngModel)]="email"
       >
       <input
         class="container__signin__inputs__passwd"
@@ -25,11 +29,13 @@
         name="user-password"
         id="user-password"
         placeholder="Password"
+        required
+        [(ngModel)]="password"
       >
     </div>
   </div>
   <div class="container__buttons">
-    <button type="submit" class="container__buttons__accept">
+    <button type="submit" class="container__buttons__accept" (click)="signinClick()">
       Sign in
     </button>
     <button class="container__buttons__reject" (click)="switchOnClick()">
