@@ -1,8 +1,8 @@
 <div class="container ">
-  <div id="animatedDiv" class="container__pop-up {{loginVisibility}}">
+  <div id="animatedDiv" class="container__pop-up " [@loginAnimation]="isHidden ? 'hidden' : 'visible'">
     <app-login (showEmitter)="switchLoginVisibility()"></app-login>
   </div>
-  <div id=" animatedDiv" class="container__pop-up {{signinVisibility}}">
+  <div id=" animatedDiv" class="container__pop-up  " [@signInAnimation]="isHidden ? 'visible' : 'hidden'">
     <app-signin (showEmitter)="switchLoginVisibility()"></app-signin>
   </div>
 </div>
