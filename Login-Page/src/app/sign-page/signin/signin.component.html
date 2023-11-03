@@ -4,33 +4,36 @@
       <h2>Welcome new friend!</h2>
       <p>It's good to have you here.</p>
     </div>
-    <div class="container__signin__inputs">
+    <div class="container__signin__inputs" [formGroup]="formulario">
       <input
-        class="container__signin__inputs__name"
+        class="container__signin__inputs__name {{invalidName}}"
         type="text"
         name="user-name"
         id="user-name"
         placeholder="Name"
         required
+        formControlName="name"
         [(ngModel)]="name"
       >
       <input
-        class="container__signin__inputs__email"
+        class="container__signin__inputs__email {{invalidEmail}}"
         type="email"
         name="user-email"
         id="user-email"
         placeholder="Email"
         required
+        formControlName="email"
         [(ngModel)]="email"
       >
       <input
-        class="container__signin__inputs__passwd"
+        class="container__signin__inputs__passwd {{invalidPasswd}}"
         type="password"
         name="user-password"
         id="user-password"
         placeholder="Password"
         required
-        [(ngModel)]="password"
+        formControlName="password"
+        [(ngModel)]="passwd"
       >
     </div>
   </div>

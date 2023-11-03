@@ -4,24 +4,26 @@
       <h2>Welcome back!</h2>
       <p>Tell us who you are.</p>
     </div>
-    <div class="container__login__inputs">
+    <div class="container__login__inputs" [formGroup]="formulario">
       <input
-        class="container__login__inputs__email"
+        class="container__login__inputs__email {{invalidEmail}}"
         type="email"
         name="user-email"
         id="user-email"
         placeholder="Email"
         required
+        formControlName="email"
         [(ngModel)]="email"
       >
       <input
-        class="container__login__inputs__passwd"
+        class="container__login__inputs__passwd {{invalidPasswd}}"
         type="password"
         name="user-password"
         id="user-password"
         placeholder="Password"
         required
-        [(ngModel)]="password"
+        formControlName="password"
+        [(ngModel)]="passwd"
       >
     </div>
   </div>
